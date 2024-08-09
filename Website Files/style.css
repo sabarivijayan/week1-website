@@ -83,10 +83,93 @@ nav{
     border: 1px solid #f6f61b;
     background: #f6f61bcb;
 }
-nav .fa{
+nav .fa-solid{
     display: none;
     color: white;
 }
+.sneak-peak{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #dfda4c;
+}
+.sneak-peak h1{
+    font-size: 36px;
+    font-weight: 600px;
+    color: #343333;
+}
+.sneak-peak p{
+    color: #343333;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.col-4{
+    flex-basis: 20%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/background.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.col-4:hover{
+    box-shadow: 0 0 35px 0px rgba(0,0,0,0.6);
+}
+h6{
+    color: #343333;
+}
+.col-4 a{
+    text-decoration: none;
+    color: black;
+}
+.cta{
+    margin: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/background.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    margin-bottom: 40px;
+    padding: 0;
+    color: white;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #dfda4c;
+}
+.footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa-brands{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 30px;
+}
+
 @media(max-width: 800px){
     .logo{
         width: 100px;
@@ -99,7 +182,7 @@ nav .fa{
     }
     .nav-links{
         position: absolute;
-        background: #dfdf18;
+        background: #dfda4c;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -118,22 +201,10 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
-}
-.sneak-peak{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-    background-color: #400456;
-}
-.sneak-peak h1{
-    font-size: 36px;
-    font-weight: 600px;
-    color: #fff;
-}
-.sneak-peak p{
-    color: #fff;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 10px;
+    .row{
+        flex-direction: column;
+    }
+    .cta h1{
+        font-size: 24px;
+    }
 }
