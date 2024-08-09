@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/60890f7fcf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="index.html"><img src="images/download (1).svg" alt="" class="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">Mens</a></li>
+                    <li><a href="index.html">Womens</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                    <li><a href="index.html">Staff</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+    <section>
+        <div class="text-box">
+            <h1>Your destination for kick-ass sneakers</h1>
+            <p>We have got a large collection of high quality, authentic sneakers from world famous makers like  Nike, Adidas, Vans....<br>You name it we got it.</p>
+            <a href="" class="hero-btn">Visit us to see more</a>
+        </div>
+    </section>
+
+    <section class="sneak-peak">
+        <h1>Have a sneap peak on our stuff</h1>
+        <p>Like them? Great!!! Dive deep into more we have to offer</p>
+    </section>
+
+
+
+
+<!--Toggle Menu JavaScript-->
+    <script>
+        var navLink = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = '0';
+        }
+        function hideMenu(){
+            navLinks.style.right = '-200px';
+        }
+    </script>
+</body>
+</html>
