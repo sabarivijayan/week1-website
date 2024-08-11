@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SneakerHeads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sub-header">
+
+        <!---------------------Navbar section-------------------->
+        <nav>
+            <a href="index.html"><img src="/Images/download-_1_.svg" alt="" class="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <img src="/Images/icons8-close.svg" class="menuicon" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mens.html">Mens</a></li>
+                    <li><a href="womens.html">Womens</a></li>
+                    <li><a href="unisex.html">Unisex</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <img src="/Images/icons8-menu (2).svg" class="menuicon" onclick="showMenu()">
+        </nav>
+
+        <!---------------Title------------------>
+        <h1>About Us</h1>
+    </header>
+
+    <section class="about-us">
+        <div class="row">
+            <!--------------------------About description-------------------------->
+            <div class="about-col">
+                <h1>We've got the coolest kicks that money can buy!!!</h1>
+                <p>We are a new up and coming sneaker store based out of Kakkanad, Kochi from God's Own Country Kerala.<br> 
+                    We aim to provide the cleanest kicks for the sneaker-heads out there looking to drip out. 
+                    We receive fresh intake of products every month and try our best at getting only authentic kicks, be it Nike, Jordans, Adidas or Puma.
+                    <br>You name it we got it and in case we don't we will make it happen for you.
+                    <br>So make sure to check out the store at Kakkanad and if you are not a people person our website is always updated or you to window shop (You can ask for the product through the contact page and the shop will get back to you).
+                </p>
+                <a href="" class="hero-btn black-btn">Explore Now</a>
+            </div>
+            <div class="about-col">
+                <img src="/Images/SNEAKER HEADS DREAM👟.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-----------------------------footer section----------------------------->
+    <footer class="about-footer">
+        <h3>About Us</h3>
+        <p>We are an up and coming store based out of Kerala providing our customers with premium high quality sneakers.<br>We aim to provide great customer service and meet all our customer needs as much as possible.</p>
+        <div class="icons">
+            <a href="" target="_blank"><img src="/Images/icons8-instagram (1).svg" alt=""></a>
+            <a href="" target="_blank"><img src="/Images/icons8-twitter.svg" alt=""></a>
+        </div>
+    </footer>
+
+
+
+    <!--Toggle Menu JavaScript-->
+    <script defer>
+        var navLink = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = '0';
+        }
+        function hideMenu(){
+            navLinks.style.right = '-200px';
+        }
+    </script>
+</body>
+</html>
