@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - SneakerHeads</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="sub-header">
-        
+
         <!--------------------Navbar section-------------------->
         <nav>
-            <a href="index.html"><img src="/Images/download-_1_.svg" alt="" class="logo"></a>
+            <a href="index.html"><img src="../Images/download-_1_.svg" alt="" class="logo"></a>
             <div class="nav-links" id="navLinks">
-                <img src="/Images/icons8-close.svg" class="menuicon" onclick="hideMenu()">
+                <img src="../Images/icons8-close.svg" class="menuicon" onclick="hideMenu()">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -23,7 +25,7 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <img src="/Images/icons8-menu (2).svg" class="menuicon" onclick="showMenu()">
+            <img src="../Images/icons8-menu (2).svg" class="menuicon" onclick="showMenu()">
         </nav>
 
         <!----------------Title---------------->
@@ -32,13 +34,16 @@
 
     <!---------------------------Google map location--------------------------->
     <section class="location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.2520724757372!2d76.3653011883354!3d10.016173286639775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b1c8044e31d%3A0x80d35de422b84cf2!2sShoe%20Club%20Kakkanad!5e0!3m2!1sen!2sin!4v1723285773120!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.2520724757372!2d76.3653011883354!3d10.016173286639775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b1c8044e31d%3A0x80d35de422b84cf2!2sShoe%20Club%20Kakkanad!5e0!3m2!1sen!2sin!4v1723285773120!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
 
     <section class="contact-us">
         <div class="contact-row">
-            
+
             <!-----------------Address and contact details------------------->
             <div class="contact-col">
                 <div>
@@ -60,45 +65,111 @@
                     </span>
                 </div>
             </div>
-            
+
             <!--------------------Contact form------------------------>
             <div class="contact-col">
-                <form name="form1" id="form1" action="https://api.web3forms.com/submit" method="POST">
+                <form name="form1" id="form1" action="https://api.web3forms.com/submit" method="POST"
+                    onsubmit="return validateForm()">
                     <input type="hidden" name="access_key" value="a3f4741c-553b-40a6-a3e8-88ed42088561">
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-                    <input type="text" name="subject" id="subject" placeholder="Enter your subject" required>
-                    <textarea rows="8" name="message" id="message" placeholder="Your message here" required></textarea>
+
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Enter your email">
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Enter your subject">
+                        <span class="error" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="8" name="message" id="message" placeholder="Your message here"></textarea>
+                        <span class="error" id="messageError"></span>
+                    </div>
+
                     <button id="btn" type="submit" class="hero-btn black-btn">Send Message</button>
                 </form>
             </div>
 
         </div>
     </section>
-    
+
     <!-----------------------------footer section----------------------------->
     <footer class="about-footer">
         <h3>About Us</h3>
-        <p>We are an up and coming store based out of Kerala providing our customers with premium high quality sneakers.<br>We aim to provide great customer service and meet all our customer needs as much as possible.</p>
+        <p>We are an up and coming store based out of Kerala providing our customers with premium high quality
+            sneakers.<br>We aim to provide great customer service and meet all our customer needs as much as possible.
+        </p>
         <div class="icons">
-            <a href="" target="_blank"><img src="/Images/icons8-instagram (1).svg" alt=""></a>
-            <a href="" target="_blank"><img src="/Images/icons8-twitter.svg" alt=""></a>
+            <a href="" target="_blank"><img src="../Images/icons8-instagram (1).svg" alt=""></a>
+            <a href="" target="_blank"><img src="../Images/icons8-twitter.svg" alt=""></a>
         </div>
     </footer>
 
 
 
-<!--Toggle Menu JavaScript-->
+    <!--Toggle Menu JavaScript-->
     <script>
         var navLink = document.getElementById("navLinks");
-        
-        function showMenu(){
+
+        function showMenu() {
             navLinks.style.right = '0';
         }
 
-        function hideMenu(){
+        function hideMenu() {
             navLinks.style.right = '-200px';
+        }
+        function validateForm() {
+
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('subjectError').innerText = '';
+            document.getElementById('messageError').innerText = '';
+
+            // Get input values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate name
+            if (!name) {
+                document.getElementById('nameError').innerText = 'Name is required';
+                isValid = false;
+            }
+
+            // Validate email
+            if (!email) {
+                document.getElementById('emailError').innerText = 'Email is required';
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById('emailError').innerText = 'Invalid email address';
+                isValid = false;
+            }
+
+            // Validate subject
+            if (!subject) {
+                document.getElementById('subjectError').innerText = 'Subject is required';
+                isValid = false;
+            }
+
+            // Validate message
+            if (!message) {
+                document.getElementById('messageError').innerText = 'Message is required';
+                isValid = false;
+            }
+
+            return isValid;
         }
     </script>
 </body>
+
 </html>
